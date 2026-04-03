@@ -1,0 +1,126 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: #13132A;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+
+.modal-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.modal-subtitle {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.modal-item-info {
+  background: rgba(0,77,152,0.15);
+  border: 1px solid rgba(0,77,152,0.3);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-item-name { font-weight: 600; font-size: 0.9rem; }
+.modal-item-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--barca-gold);
+}
+
+.btn-pay {
+  width: 100%;
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-light));
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0,77,152,0.4);
+}
+.btn-pay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,77,152,0.5);
+}
+
+.payment-note {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* ─── Success State ─── */
+.success-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+.success-screen.show { display: flex; }
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #00c853, #00e676);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  animation: successPop 0.4s ease;
+}
+
+.success-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.success-text {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}

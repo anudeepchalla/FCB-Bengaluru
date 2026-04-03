@@ -1,0 +1,144 @@
+/* ─── Hero ─── */
+.hero {
+  min-height: calc(100vh - 70px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--barca-dark);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(0,77,152,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(165,0,68,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 0%, rgba(237,187,0,0.1) 0%, transparent 40%);
+}
+
+.hero-stripes {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 45%;
+  display: flex;
+  overflow: hidden;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.stripe { flex: 1; animation: stripeShimmer 4s ease-in-out infinite alternate; }
+.stripe:nth-child(odd)  { background: var(--barca-blue); opacity: 0.7; }
+.stripe:nth-child(even) { background: var(--barca-red);  opacity: 0.7; }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 6rem;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.hero-title .line-gold  { color: var(--barca-gold); }
+.hero-title .line-white { color: #fff; }
+
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+.hero-sub strong { color: var(--barca-gold); font-weight: 600; }
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 3rem;
+  right: 6rem;
+  display: flex;
+  gap: 3rem;
+  z-index: 2;
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.stat-item { text-align: center; }
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: var(--barca-gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+}
+
+/* ─── Story ─── */
+.story-text {
+  max-width: 800px;
+}
+
+.story-text p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.85;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.story-text p strong {
+  color: var(--barca-gold);
+  font-weight: 600;
+}
+
+.story-text p em {
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+}
+
+.story-text .visca {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: var(--barca-gold);
+  margin-top: 1rem;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .hero-content { padding: 3rem; }
+  .hero-stats { right: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .hero-content { padding: 2rem 1.5rem; }
+  .hero-stats {
+    position: static;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+  .hero-stripes { width: 30%; opacity: 0.4; }
+}

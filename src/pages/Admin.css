@@ -1,0 +1,312 @@
+.page-admin { min-height: 100vh; }
+
+/* ─── Dashboard Shell ─── */
+.admin-dash {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem 4rem;
+}
+
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-topbar-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+}
+.admin-topbar-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 2px;
+  font-weight: 300;
+}
+
+.btn-logout {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-logout:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ─── Tabs ─── */
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-tab {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.admin-tab.active,
+.admin-tab:hover {
+  background: rgba(0,77,152,0.2);
+  border-color: rgba(0,77,152,0.4);
+  color: #fff;
+}
+
+.admin-tab-content { display: none; }
+.admin-tab-content.active { display: block; }
+
+/* ─── Section Header ─── */
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+.admin-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+.admin-section-sub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 2px;
+}
+
+.btn-add-new {
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-light));
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.btn-add-new:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,77,152,0.4); }
+
+/* ─── Items Grid ─── */
+.admin-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.admin-empty {
+  grid-column: 1 / -1;
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.admin-empty-icon { display: block; font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+.admin-item-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.admin-item-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: rgba(0,77,152,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.admin-item-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.admin-item-body { flex: 1; min-width: 0; }
+
+.admin-item-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.admin-item-meta {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.admin-item-actions { margin-top: 0.6rem; }
+
+.btn-admin-delete {
+  background: rgba(165,0,68,0.15);
+  border: 1px solid rgba(165,0,68,0.3);
+  color: #FF6BA8;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-admin-delete:hover { background: rgba(165,0,68,0.3); }
+
+/* ─── Admin Forms (Overlay) ─── */
+.admin-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.admin-form-box {
+  background: #13132A;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  animation: modalIn 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.admin-form-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.admin-form-sub {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.admin-form-grid .form-group.full { grid-column: 1 / -1; }
+
+.event-type-select {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.event-type-pill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.event-type-pill.selected,
+.event-type-pill:hover {
+  background: rgba(0,77,152,0.3);
+  border-color: rgba(0,77,152,0.6);
+  color: #fff;
+}
+
+/* ─── Photo Upload ─── */
+.photo-upload-area {
+  border: 2px dashed rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.photo-upload-area:hover { border-color: rgba(0,77,152,0.5); }
+.upload-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.upload-text { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+.photo-preview {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.photo-preview img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ─── Modal Close ─── */
+.modal-close {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #fff;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.15); }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .admin-dash { padding: 1.5rem; }
+  .admin-form-grid { grid-template-columns: 1fr; }
+  .admin-section-header { flex-direction: column; align-items: flex-start; }
+}
