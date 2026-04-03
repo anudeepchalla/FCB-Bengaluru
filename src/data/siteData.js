@@ -148,7 +148,7 @@ export const MEMBERSHIP_TIERS = [
 // ─── Contact Info ───
 export const CONTACT_INFO = [
   { icon: '📧', color: 'gold', label: 'Email Us', value: 'barcabengaluru@gmail.com', href: 'mailto:barcabengaluru@gmail.com' },
-  { icon: '💬', color: 'green', label: 'WhatsApp', value: '+91 98765 43210', href: 'https://wa.me/919876543210' },
+  { icon: '💬', color: 'green', label: 'WhatsApp', value: '+91 97779 12631', href: 'https://wa.me/919777912631' },
   { icon: '📍', color: 'blue', label: 'Registered Address', value: 'Indiranagar, Bengaluru — 560038, Karnataka', href: null },
 ];
 
